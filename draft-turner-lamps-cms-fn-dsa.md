@@ -416,7 +416,7 @@ external &mu; calculations in further detail.
 
 # IANA Considerations
 
-For the ASN.1 module in {{asn1}}, IANA [is requested/has assigned]
+For the ASN.1 module in {{asn1}}, IANA \[ is requested/has assigned \]
 the following object identifier (OID) in the "SMI Security for S/MIME
 Module Identifier" registry (1.2.840.113549.1.9.16.0):
 
@@ -430,7 +430,7 @@ Module Identifier" registry (1.2.840.113549.1.9.16.0):
 # ASN.1 Module {#asn1}
 
 <aside markdown="block">
-RFC EDITOR: Please replace the reference to [I-D.turner-lamps-fn-dsa-certificates]
+RFC EDITOR: Please replace the reference to I-D.turner-lamps-fn-dsa-certificates
 in the ASN.1 module below with a reference the corresponding published RFC.
 </aside>
 
