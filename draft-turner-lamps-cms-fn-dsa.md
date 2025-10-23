@@ -28,10 +28,12 @@ venue:
 author:
 #  -
 #    fullname: Ben Salter
+#    ins: B. Salter
 #    organization: UK National Cyber Security Centre
 #    email: ben.s3@ncsc.gov.uk
 #  -
 #    fullname: Adam Raine
+#    ins: A. Raine
 #    organization: UK National Cyber Security Centre
 #    email: adam.r@ncsc.gov.uk
 #  -
@@ -41,7 +43,7 @@ author:
 #    email: daniel.vangeest@cryptonext-security.com
   -
     fullname: Sean 
-    ins: S. 
+    ins: S. Turner
     organization: sn3rd
     email: sean@sn3rd.com
 
