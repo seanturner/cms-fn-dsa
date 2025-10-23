@@ -451,32 +451,12 @@ FN-DSA-512 signer, with signed attributes included:
   TODO:  Get Example.
 </aside>
 
-<!--
-~~~
-{::include ./examples/fndsa44-signed-attrs.pem}
-~~~
-
-~~~
-{::include ./examples/fndsa512-signed-attrs.txt}
-~~~
--->
-
 The following is an example of a signed-data with a single
 FN-DSA-1024 signer, with signed attributes included:
 
 <aside markdown="block">
   TODO:  Get Example.
 </aside>
-
-<!--
-~~~
-{::include ./examples/fndsa1024-signed-attrs.pem}
-~~~
-
-~~~
-{::include ./examples/fndsa1024-signed-attrs.txt}
-~~~
--->
 
 # Acknowledgments
 {:numbered="false"}
