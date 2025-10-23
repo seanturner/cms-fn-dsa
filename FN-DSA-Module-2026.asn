@@ -1,0 +1,35 @@
+FN-DSA-Module-2026
+  { iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs9(9)
+    id-smime(16) id-mod(0) id-mod-fn-dsa-2026(TBD1) }
+
+DEFINITIONS IMPLICIT TAGS ::= BEGIN
+
+EXPORTS ALL;
+
+IMPORTS SIGNATURE-ALGORITHM, SMIME-CAPS
+  FROM AlgorithmInformation-2009 -- in [RFC5911]
+  { iso(1) identified-organization(3) dod(6) internet(1)
+    security(5) mechanisms(5) pkix(7) id-mod(0)
+    id-mod-algorithmInformation-02(58) }
+
+sa-fn-dsa-512, sa-fn-dsa-10124
+  FROM X509-FN-DSA-2026 -- From [I-D.turner-lamps-fn-dsa-certificates]
+  { iso(1) identified-organization(3) dod(6) internet(1)
+    security(5) mechanisms(5) pkix(7) id-mod(0)
+    id-mod-x509-fn-dsa-2024(TBD2) } ;
+
+--
+-- Expand the signature algorithm set used by CMS [RFC5911]
+--
+
+SignatureAlgorithmSet SIGNATURE-ALGORITHM ::= {
+  sa-fn-dsa-512 |
+  sa-fn-dsa-1024,
+  ... }
+
+SMimeCaps SMIME-CAPS ::= {
+  sa-fn-dsa-512.&smimeCaps |
+  sa-fn-dsa-1024.&smimeCaps,
+  ... }
+
+END
