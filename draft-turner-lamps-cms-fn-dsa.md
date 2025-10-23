@@ -36,11 +36,11 @@ author:
 #    ins: A. Raine
 #    organization: UK National Cyber Security Centre
 #    email: adam.r@ncsc.gov.uk
-#  -
-#    fullname: Daniel Van Geest
-#    ins: D. Van Geest
-#    organization: CryptoNext Security
-#    email: daniel.vangeest@cryptonext-security.com
+  -
+    fullname: Daniel Van Geest
+    ins: D. Van Geest
+    organization: CryptoNext Security
+    email: daniel.vangeest@cryptonext-security.com
   -
     fullname: Sean 
     ins: S. Turner
