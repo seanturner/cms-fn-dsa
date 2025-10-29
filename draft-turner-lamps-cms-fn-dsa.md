@@ -26,16 +26,6 @@ venue:
   latest: "https://seanturner.github.io/cms-fn-dsa/draft-turner-lamps-cms-fn-dsa.html"
 
 author:
-#  -
-#    fullname: Ben Salter
-#    ins: B. Salter
-#    organization: UK National Cyber Security Centre
-#    email: ben.s3@ncsc.gov.uk
-#  -
-#    fullname: Adam Raine
-#    ins: A. Raine
-#    organization: UK National Cyber Security Centre
-#    email: adam.r@ncsc.gov.uk
   -
     fullname: Daniel Van Geest
     ins: D. Van Geest
