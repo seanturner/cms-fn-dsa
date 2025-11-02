@@ -3,7 +3,7 @@ title: "Use of the FN-DSA Signature Algorithm in the Cryptographic Message Synta
 abbrev: "FN-DSA in the CMS"
 category: std
 
-docname: draft-ietf-lamps-cms-fn-dsa-latest
+docname: draft-turner-lamps-cms-fn-dsa-latest
 submissiontype: IETF
 number:
 date:
