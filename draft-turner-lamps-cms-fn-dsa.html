@@ -5,6 +5,7 @@
 <meta content="Common,Latin" name="scripts">
 <meta content="initial-scale=1.0" name="viewport">
 <title>Use of the FN-DSA Signature Algorithm in the Cryptographic Message Syntax (CMS)</title>
+<meta content="Daniel Van Geest" name="author">
 <meta content="Sean" name="author">
 <meta content="
        The Fast-Fourier Transform over NTRU-Lattice-Based Digital Signature
@@ -21,7 +22,7 @@ algorithm identifier is provided.
 <meta content="Falcon" name="keyword">
 <meta content="PKIX" name="keyword">
 <meta content="S/MIME" name="keyword">
-<meta content="draft-ietf-lamps-cms-fn-dsa-latest" name="ietf.draft">
+<meta content="draft-turner-lamps-cms-fn-dsa-latest" name="ietf.draft">
 <!-- Generator version information:
   xml2rfc 3.31.0
     Python 3.12.12
@@ -1056,7 +1057,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <td class="right">November 2025</td>
 </tr></thead>
 <tfoot><tr>
-<td class="left">Turner</td>
+<td class="left">Van Geest &amp; Turner</td>
 <td class="center">Expires 6 May 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
@@ -1067,7 +1068,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dt class="label-workgroup">Workgroup:</dt>
 <dd class="workgroup">Limited Additional Mechanisms for PKIX and SMIME</dd>
 <dt class="label-internet-draft">Internet-Draft:</dt>
-<dd class="internet-draft">draft-ietf-lamps-cms-fn-dsa-latest</dd>
+<dd class="internet-draft">draft-turner-lamps-cms-fn-dsa-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
 <time datetime="2025-11-02" class="published">2 November 2025</time>
@@ -1076,8 +1077,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
 <dd class="expires"><time datetime="2026-05-06">6 May 2026</time></dd>
-<dt class="label-authors">Author:</dt>
+<dt class="label-authors">Authors:</dt>
 <dd class="authors">
+<div class="author">
+      <div class="author-name">D. Van Geest</div>
+<div class="org">CryptoNext Security</div>
+</div>
 <div class="author">
       <div class="author-name">S. Turner</div>
 <div class="org">sn3rd</div>
@@ -1103,14 +1108,14 @@ algorithm identifier is provided.<a href="#section-abstract-1" class="pilcrow">�
 <p id="section-note.1-1">This note is to be removed before publishing as an RFC.<a href="#section-note.1-1" class="pilcrow">¶</a></p>
 <p id="section-note.1-2">
         The latest revision of this draft can be found at <span><a href="https://seanturner.github.io/cms-fn-dsa/draft-turner-lamps-cms-fn-dsa.html">https://seanturner.github.io/cms-fn-dsa/draft-turner-lamps-cms-fn-dsa.html</a></span>.
-        Status information for this document may be found at <span><a href="https://datatracker.ietf.org/doc/draft-ietf-lamps-cms-fn-dsa/">https://datatracker.ietf.org/doc/draft-ietf-lamps-cms-fn-dsa/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
+        Status information for this document may be found at <span><a href="https://datatracker.ietf.org/doc/draft-turner-lamps-cms-fn-dsa/">https://datatracker.ietf.org/doc/draft-turner-lamps-cms-fn-dsa/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
 <p id="section-note.1-3">
         Discussion of this document takes place on the
         Limited Additional Mechanisms for PKIX and SMIME Working Group mailing list (<span><a href="mailto:spasm@ietf.org">mailto:spasm@ietf.org</a></span>),
         which is archived at <span><a href="https://mailarchive.ietf.org/arch/browse/spasm/">https://mailarchive.ietf.org/arch/browse/spasm/</a></span>.
         Subscribe at <span><a href="https://www.ietf.org/mailman/listinfo/spasm/">https://www.ietf.org/mailman/listinfo/spasm/</a></span>.<a href="#section-note.1-3" class="pilcrow">¶</a></p>
 <p id="section-note.1-4">Source for this draft and an issue tracker can be found at
-        <span><a href="https://github.com/lamps-wg/cms-fn-dsa">https://github.com/lamps-wg/cms-fn-dsa</a></span>.<a href="#section-note.1-4" class="pilcrow">¶</a></p>
+        <span><a href="https://github.com/seanturner/cms-fn-dsa">https://github.com/seanturner/cms-fn-dsa</a></span>.<a href="#section-note.1-4" class="pilcrow">¶</a></p>
 </section>
 <div id="status-of-memo">
 <section id="section-boilerplate.1">
@@ -1215,7 +1220,7 @@ algorithm identifier is provided.<a href="#section-abstract-1" class="pilcrow">�
             <p id="section-toc.1-1.10.1"><a href="#appendix-C" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11">
-            <p id="section-toc.1-1.11.1"><a href="#appendix-D" class="auto internal xref"></a><a href="#name-authors-address" class="internal xref">Author's Address</a></p>
+            <p id="section-toc.1-1.11.1"><a href="#appendix-D" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
 </li>
         </ul>
 </nav>
@@ -1823,9 +1828,17 @@ FN-DSA-1024 signer, with signed attributes included:<a href="#appendix-B-4" clas
 </div>
 <div id="authors-addresses">
 <section id="appendix-D">
-      <h2 id="name-authors-address">
-<a href="#name-authors-address" class="section-name selfRef">Author's Address</a>
+      <h2 id="name-authors-addresses">
+<a href="#name-authors-addresses" class="section-name selfRef">Authors' Addresses</a>
       </h2>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">Daniel Van Geest</span></div>
+<div dir="auto" class="left"><span class="org">CryptoNext Security</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:daniel.vangeest@cryptonext-security.com" class="email">daniel.vangeest@cryptonext-security.com</a>
+</div>
+</address>
 <address class="vcard">
         <div dir="auto" class="left"><span class="fn nameRole">Sean</span></div>
 <div dir="auto" class="left"><span class="org">sn3rd</span></div>

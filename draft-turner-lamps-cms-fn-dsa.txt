@@ -2,15 +2,16 @@
 
 
 
-Limited Additional Mechanisms for PKIX and SMIME               S. Turner
-Internet-Draft                                                     sn3rd
-Intended status: Standards Track                         2 November 2025
-Expires: 6 May 2026
+Limited Additional Mechanisms for PKIX and SMIME            D. Van Geest
+Internet-Draft                                       CryptoNext Security
+Intended status: Standards Track                               S. Turner
+Expires: 6 May 2026                                                sn3rd
+                                                         2 November 2025
 
 
    Use of the FN-DSA Signature Algorithm in the Cryptographic Message
                               Syntax (CMS)
-                   draft-ietf-lamps-cms-fn-dsa-latest
+                  draft-turner-lamps-cms-fn-dsa-latest
 
 Abstract
 
@@ -29,7 +30,7 @@ About This Document
    The latest revision of this draft can be found at
    https://seanturner.github.io/cms-fn-dsa/draft-turner-lamps-cms-fn-
    dsa.html.  Status information for this document may be found at
-   https://datatracker.ietf.org/doc/draft-ietf-lamps-cms-fn-dsa/.
+   https://datatracker.ietf.org/doc/draft-turner-lamps-cms-fn-dsa/.
 
    Discussion of this document takes place on the Limited Additional
    Mechanisms for PKIX and SMIME Working Group mailing list
@@ -38,7 +39,7 @@ About This Document
    https://www.ietf.org/mailman/listinfo/spasm/.
 
    Source for this draft and an issue tracker can be found at
-   https://github.com/lamps-wg/cms-fn-dsa.
+   https://github.com/seanturner/cms-fn-dsa.
 
 Status of This Memo
 
@@ -89,7 +90,7 @@ Table of Contents
    Appendix A.  ASN.1 Module
    Appendix B.  Examples
    Acknowledgments
-   Author's Address
+   Authors' Addresses
 
 1.  Introduction
 
@@ -572,7 +573,12 @@ Acknowledgments
    This document was heavily influenced by [RFC8419], [RFC9814], and
    [RFC9881].  Thanks go to the authors of those documents.
 
-Author's Address
+Authors' Addresses
+
+   Daniel Van Geest
+   CryptoNext Security
+   Email: daniel.vangeest@cryptonext-security.com
+
 
    Sean
    sn3rd
