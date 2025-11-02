@@ -30,6 +30,11 @@ author:
     fullname: Daniel Van Geest
     ins: D. Van Geest
     organization: CryptoNext Security
+author:
+  -
+    fullname: Daniel Van Geest
+    ins: D. Van Geest
+    organization: CryptoNext Security
     email: daniel.vangeest@cryptonext-security.com
   -
     fullname: Sean 
