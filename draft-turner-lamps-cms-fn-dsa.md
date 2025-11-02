@@ -468,4 +468,4 @@ FN-DSA-1024 signer, with signed attributes included:
 </aside>
 
 This document was heavily influenced by {{?RFC8419}}, {{RFC9814}}, and
-{{RFC9881}}. Thanks go to the authors of those documents.
+{{?RFC9881}}. Thanks go to the authors of those documents.
