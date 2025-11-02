@@ -22,7 +22,7 @@ venue:
   type: "Working Group"
   mail: "spasm@ietf.org"
   arch: "https://mailarchive.ietf.org/arch/browse/spasm/"
-  github: "lamps-wg/cms-fn-dsa"
+  github: "seanturner/cms-fn-dsa"
   latest: "https://seanturner.github.io/cms-fn-dsa/draft-turner-lamps-cms-fn-dsa.html"
 
 author:
@@ -42,7 +42,7 @@ author:
 #    organization: CryptoNext Security
 #    email: daniel.vangeest@cryptonext-security.com
   -
-    fullname: Sean 
+    fullname: Sean
     ins: S. Turner
     organization: sn3rd
     email: sean@sn3rd.com
