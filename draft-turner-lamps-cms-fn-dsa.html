@@ -1353,7 +1353,7 @@ that contain a hash of the content, rather than being computed over the
 message content itself. Since signed attributes are typically small, use
 of pre-hash modes in the CMS would not significantly reduce the size of
 the data to be signed, and hence offers no benefit. This document follows
-that convention and does not specify the use of FL-DSA's pre-hash mode
+that convention and does not specify the use of FN-DSA's pre-hash mode
 ("HashFN-DSA") in the CMS.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1365,7 +1365,7 @@ that convention and does not specify the use of FL-DSA's pre-hash mode
 <p id="section-3.2-1"><span>[<a href="#RFC5652" class="cite xref">RFC5652</a>]</span> describes the two methods that are used to calculate and
 verify signatures in the CMS. One method is used when signed attributes
 are present in the <code>signedAttrs</code> field of the relevant <code>SignerInfo</code>, and
-another is used when signed attributes are absent. Each method produce
+another is used when signed attributes are absent. Each method produces
 a different "message digest" to be supplied to the signature algorithm
 in question, but because the pure mode of FN-DSA is used, the "message
 digest" is in fact the entire message. Use of signed attributes is
