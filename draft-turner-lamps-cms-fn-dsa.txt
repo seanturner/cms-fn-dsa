@@ -168,7 +168,7 @@ Table of Contents
 
    id-fn-dsa-512 OBJECT IDENTIFIER ::= { sigAlgs TBD }
 
-   id-fn-dsa-87 OBJECT IDENTIFIER ::= { sigAlgs TBD }
+   id-fn-dsa-1024 OBJECT IDENTIFIER ::= { sigAlgs TBD }
 
 3.  Signed-Data Conventions
 
