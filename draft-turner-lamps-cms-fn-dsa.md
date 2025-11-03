@@ -193,7 +193,7 @@ that contain a hash of the content, rather than being computed over the
 message content itself. Since signed attributes are typically small, use
 of pre-hash modes in the CMS would not significantly reduce the size of
 the data to be signed, and hence offers no benefit. This document follows
-that convention and does not specify the use of FL-DSA's pre-hash mode
+that convention and does not specify the use of FN-DSA's pre-hash mode
 ("HashFN-DSA") in the CMS.
 
 ## Signature Generation and Verification
@@ -201,7 +201,7 @@ that convention and does not specify the use of FL-DSA's pre-hash mode
 {{RFC5652}} describes the two methods that are used to calculate and
 verify signatures in the CMS. One method is used when signed attributes
 are present in the `signedAttrs` field of the relevant `SignerInfo`, and
-another is used when signed attributes are absent. Each method produce
+another is used when signed attributes are absent. Each method produces
 a different "message digest" to be supplied to the signature algorithm
 in question, but because the pure mode of FN-DSA is used, the "message
 digest" is in fact the entire message. Use of signed attributes is
@@ -264,7 +264,7 @@ parameters. Each FN-DSA parameter set ...
  least 2 * &lambda; bits of output. The overall security strength
  offered by an ML-DSA signature calculated over signed attributes is
  the floor of the digest algorithm's strength and the strength of the
- FL-DSA parameter set. Verifiers MAY reject a signature if the signer's
+ FN-DSA parameter set. Verifiers MAY reject a signature if the signer's
  choice of digest algorithm does not meet the security requirements of
  their choice of ML-DSA parameter set.
 -->
