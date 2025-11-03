@@ -166,7 +166,7 @@ sigAlgs OBJECT IDENTIFIER ::= { joint-iso-itu-t(2) country(16)
 
 id-fn-dsa-512 OBJECT IDENTIFIER ::= { sigAlgs TBD }
 
-id-fn-dsa-87 OBJECT IDENTIFIER ::= { sigAlgs TBD }
+id-fn-dsa-1024 OBJECT IDENTIFIER ::= { sigAlgs TBD }
 
 ~~~
 
