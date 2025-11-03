@@ -74,6 +74,13 @@ informative:
     seriesinfo:
       ITU-T Recommendation: X.680
       ISO/IEC: 8824-1:2021
+  BD23:
+    title: A Differential Fault Attack against Deterministic Falcon Signatures
+    author:
+      - name: Sven Bauer
+      - name: Fabrizio De Santis
+    date: 2023
+    target: https://eprint.iacr.org/2023/422
 ---
 
 --- abstract
@@ -359,18 +366,13 @@ some additional information.
   TODO: Insert references for active research.
 </aside>
 
-By default, FN-DSA signature generation uses randomness from two
+FN-DSA signature generation uses randomness from two
 sources: fresh random data generated during signature generation, and
-precomputed random data included in the signer's private key. This is
-referred to as the "hedged" variant of FN-DSA. Inclusion of both
+precomputed random data included in the signer's private key. Inclusion of both
 sources of random data can help mitigate against faulty random number
-generators, side-channel attacks, and fault attacks. {{FIPS206}} also
-permits creating deterministic signatures using just the precomputed
-random data in the signer's private key. The same verification
-algorithm is used to verify both hedged and deterministic signatures, so
-this choice does not affect interoperability. The signer SHOULD NOT use
-the deterministic variant of FN-DSA on platforms where side-channel
-attacks or fault attacks are a concern. Side channel attacks and fault
+generators, side-channel attacks, and fault attacks. Lack of fresh random
+data during FN-DSA signature generation leads to a differential fault
+attack {{BD23}}. Side channel attacks and fault
 attacks against FN-DSA are an active area of research XX XX.
 Future protection against these styles of attack may involve
 interoperable changes to the implementation of FN-DSA's internal
