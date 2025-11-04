@@ -5,8 +5,8 @@
 Limited Additional Mechanisms for PKIX and SMIME            D. Van Geest
 Internet-Draft                                       CryptoNext Security
 Intended status: Standards Track                               S. Turner
-Expires: 7 May 2026                                                sn3rd
-                                                         3 November 2025
+Expires: 8 May 2026                                                sn3rd
+                                                         4 November 2025
 
 
    Use of the FN-DSA Signature Algorithm in the Cryptographic Message
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 7 May 2026.
+   This Internet-Draft will expire on 8 May 2026.
 
 Copyright Notice
 
@@ -342,23 +342,18 @@ Table of Contents
 
       |  TODO: Insert references for active research.
 
-   By default, FN-DSA signature generation uses randomness from two
-   sources: fresh random data generated during signature generation, and
-   precomputed random data included in the signer's private key.  This
-   is referred to as the "hedged" variant of FN-DSA.  Inclusion of both
+   FN-DSA signature generation uses randomness from two sources: fresh
+   random data generated during signature generation, and precomputed
+   random data included in the signer's private key.  Inclusion of both
    sources of random data can help mitigate against faulty random number
-   generators, side-channel attacks, and fault attacks.  [FIPS206] also
-   permits creating deterministic signatures using just the precomputed
-   random data in the signer's private key.  The same verification
-   algorithm is used to verify both hedged and deterministic signatures,
-   so this choice does not affect interoperability.  The signer SHOULD
-   NOT use the deterministic variant of FN-DSA on platforms where side-
-   channel attacks or fault attacks are a concern.  Side channel attacks
-   and fault attacks against FN-DSA are an active area of research XX
-   XX.  Future protection against these styles of attack may involve
-   interoperable changes to the implementation of FN-DSA's internal
-   functions.  Implementers SHOULD consider implementing such protection
-   measures if it would be beneficial for their particular use cases.
+   generators, side-channel attacks, and fault attacks.  Lack of fresh
+   random data during FN-DSA signature generation leads to a
+   differential fault attack [BD23].  Side channel attacks and fault
+   attacks against FN-DSA are an active area of research XX XX.  Future
+   protection against these styles of attack may involve interoperable
+   changes to the implementation of FN-DSA's internal functions.
+   Implementers SHOULD consider implementing such protection measures if
+   it would be beneficial for their particular use cases.
 
    To avoid algorithm substitution attacks, the CMSAlgorithmProtection
    attribute defined in [RFC6211] SHOULD be included in signed
@@ -437,6 +432,10 @@ Table of Contents
               <https://www.itu.int/rec/T-REC-X.690>.
 
 7.2.  Informative References
+
+   [BD23]     Bauer, S. and F. D. Santis, "A Differential Fault Attack
+              against Deterministic Falcon Signatures", 2023,
+              <https://eprint.iacr.org/2023/422>.
 
    [FIPS180]  "Secure hash standard", National Institute of Standards
               and Technology (U.S.), DOI 10.6028/nist.fips.180-4, 2015,
