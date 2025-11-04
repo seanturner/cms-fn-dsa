@@ -43,11 +43,11 @@ normative:
     target: https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards
   CSOR:
     target: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration
-    title: Computer Security Objects Register
+    title: Computer Security Objects Register (CSOR)
     author:
       name: National Institute of Standards and Technology
       ins: NIST
-    date: 2024-08-20
+    date: 2025-06-13
   X690:
     target: https://www.itu.int/rec/T-REC-X.690
     title: >
@@ -81,6 +81,8 @@ informative:
       - name: Fabrizio De Santis
     date: 2023
     target: https://eprint.iacr.org/2023/422
+    seriesinfo:
+      Cryptology ePrint Archive, Paper 2023/422
 ---
 
 --- abstract
@@ -101,9 +103,7 @@ algorithm identifier is provided.
 The Fast-Fourier Transform over NTRU-Lattice-Based Digital Signature
 Algorithm (FN-DSA) is a digital signature algorithm standardised by the
 US National Institute of Standards and Technology (NIST) as part of
-their post-quantum cryptography standardisation process. It is intended
-to be secure against both "traditional" cryptographic attacks, as well
-as attacks utilising a quantum computer. It offers smaller signatures
+their post-quantum cryptography standardisation process. It offers smaller signatures
 and significantly faster runtimes than SLH-DSA {{FIPS205}}, an
 alternative post-quantum signature algorithm also standardised by NIST.
 This document specifies the use of the FN-DSA in the CMS at two security
@@ -179,11 +179,11 @@ id-fn-dsa-1024 OBJECT IDENTIFIER ::= { sigAlgs TBD }
 
 # Signed-Data Conventions
 
-## Pure Mode vs Pre-hash Mode {#pure-vs-pre-hash}
+## Pure Mode vs Pre-Hash Mode {#pure-vs-pre-hash}
 
 {{!RFC5652}} specifies that digital signatures for CMS are produced using
 a digest of the message to be signed and the signer's private key. At
-the time of publication of that RFC, all signature algorithms supported
+the {{RFC5652}} was published, all signature algorithms supported
 in the CMS required a message digest to be calculated externally to that
 algorithm, which would then be supplied to the algorithm implementation
 when calculating and verifying signatures. Since then, EdDSA {{?RFC8032}},
@@ -227,7 +227,7 @@ contained in the `SignerInfo`'s `signedAttrs` field. As described in
 {{Section 5.4 of RFC5652}}, this encoding includes the tag and length
 octets, but an `EXPLICIT SET OF` tag is used rather than the `IMPLICIT \[0\]`
 tag that appears in the final message. At a minimum, the `signedAttrs`
-field MUST at minimum include a `content-type` attribute and a
+field MUST include a `content-type` attribute and a
 `message-digest` attribute. The `message-digest` attribute contains a
 hash of the content of the `signed-data`, where the content is as
 described for the absent signed attributes case above. Recalculation
@@ -270,7 +270,7 @@ parameters. Each FN-DSA parameter set ...
  a given parameter set, so long as the digest algorithm produces at
  least 2 * &lambda; bits of output. The overall security strength
  offered by an ML-DSA signature calculated over signed attributes is
- the floor of the digest algorithm's strength and the strength of the
+ constrained by either the digest algorithm's strength or the strength of the
  FN-DSA parameter set. Verifiers MAY reject a signature if the signer's
  choice of digest algorithm does not meet the security requirements of
  their choice of ML-DSA parameter set.
@@ -323,7 +323,7 @@ ignore the content of the `digestAlgorithm` field.
  | Signature Algorithm | Algorithm Identifier OID |
  | FN-DSA-512          | id-fn-dsa-512            |
  | FN-DSA-10124        | id-fn-dsa-1024           |
- {: #tab-oids title="Signature algorithm identifier OIDs for FN-DSA"}
+ {: #tab-oids title="Signature Algorithm Identifier OIDs for FN-DSA"}
 
 <aside markdown="block">
   TODO: Verify paragraph references.
@@ -351,7 +351,7 @@ key will enable an adversary to forge arbitrary signatures.
   TODO: Verify paragraph reference.
 </aside>
 
-FN-DSA depends on high quality random numbers that are suitable for use
+FN-DSA depends on high-quality random numbers that are suitable for use
 in cryptography. The use of inadequate pseudo-random number generators
 (PRNGs) to generate such values can significantly undermine the security
 properties offered by a cryptographic algorithm. For instance, an

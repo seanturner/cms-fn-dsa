@@ -1,3 +1,6 @@
+DEPS_FILES := \
+	FN-DSA-Module-2026.asn
+
 LIBDIR := lib
 include $(LIBDIR)/main.mk
 
