@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-11-02T00:59:06.372450+00:00",
+  "timestamp": "2025-11-04T00:55:45.687763+00:00",
   "repo": "seanturner/cms-fn-dsa",
   "labels": [
     {
@@ -49,31 +49,76 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "number": 3,
+      "id": "I_kwDOQHxa487ViDmD",
+      "title": "Deterministic vs randomized",
+      "url": "https://github.com/seanturner/cms-fn-dsa/issues/3",
+      "state": "OPEN",
+      "author": "danvangeest",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "danvangeest"
+      ],
+      "labels": [],
+      "body": "FN-DSA doesn't have deterministic and randomized/hedged variants because the deterministic variant was very insecure against side-channel attacks.  Fix text referring to these differences.",
+      "createdAt": "2025-11-03T15:05:50Z",
+      "updatedAt": "2025-11-03T15:05:50Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 4,
+      "id": "I_kwDOQHxa487ViE8p",
+      "title": "FN-DSA as an alternative to SLH-DSA",
+      "url": "https://github.com/seanturner/cms-fn-dsa/issues/4",
+      "state": "OPEN",
+      "author": "danvangeest",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This draft was copied from the ML-DSA one.  In the intro, FN-DSA is listed an an alternative to SLH-DSA.  This is an artifact from the ML-DSA document.  If anything, we should list FN-DSA an an alternative to ML-DSA and specify the tradeoffs.",
+      "createdAt": "2025-11-03T15:07:30Z",
+      "updatedAt": "2025-11-03T15:13:59Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "danvangeest",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Section 3.2 also compares FN-DSA to SLH-DSA, is this appropriate or should it compare to ML-DSA or both?",
+          "createdAt": "2025-11-03T15:13:59Z",
+          "updatedAt": "2025-11-03T15:13:59Z"
+        }
+      ]
+    }
+  ],
   "pulls": [
     {
       "number": 1,
       "id": "PR_kwDOQHxa486vTXal",
       "title": "Add Daniel",
       "url": "https://github.com/seanturner/cms-fn-dsa/pull/1",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "seanturner",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-10-23T16:02:23Z",
-      "updatedAt": "2025-10-29T13:20:25Z",
+      "updatedAt": "2025-11-02T21:36:31Z",
       "baseRepository": "seanturner/cms-fn-dsa",
       "baseRefName": "main",
       "baseRefOid": "3ad6ad5062f1e2ef45cbd64ef2ce5ad0dd488eb5",
       "headRepository": "seanturner/cms-fn-dsa",
       "headRefName": "seanturner-add-daniel",
-      "headRefOid": "b3ef789b85878d6b2360618cdfbfba7c20e40560",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "0b62827a5628caa1a1f7741297c7728debd54ce6",
+      "closedAt": "2025-11-02T21:36:30Z",
+      "mergedAt": "2025-11-02T21:36:30Z",
+      "mergedBy": "seanturner",
+      "mergeCommit": {
+        "oid": "deec827d3165e66d68af37d2e5704e0fdfd742e4"
+      },
       "comments": [],
       "reviews": [
         {
@@ -97,6 +142,60 @@
           ]
         }
       ]
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDOQHxa486xFN-l",
+      "title": "md tweak",
+      "url": "https://github.com/seanturner/cms-fn-dsa/pull/2",
+      "state": "MERGED",
+      "author": "seanturner",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-11-02T21:32:46Z",
+      "updatedAt": "2025-11-02T21:33:32Z",
+      "baseRepository": "seanturner/cms-fn-dsa",
+      "baseRefName": "main",
+      "baseRefOid": "3ad6ad5062f1e2ef45cbd64ef2ce5ad0dd488eb5",
+      "headRepository": "seanturner/cms-fn-dsa",
+      "headRefName": "seanturner-md-tweak01",
+      "headRefOid": "584b73fce0d323254e1b3fb0a4abd15c6ebaf8c6",
+      "closedAt": "2025-11-02T21:33:32Z",
+      "mergedAt": "2025-11-02T21:33:32Z",
+      "mergedBy": "seanturner",
+      "mergeCommit": {
+        "oid": "07372e804e1d18a1b40a63aee8b6d23399e9fa0e"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDOQHxa486xNl2u",
+      "title": "FN-DSA doesn't have a deterministic variant",
+      "url": "https://github.com/seanturner/cms-fn-dsa/pull/5",
+      "state": "OPEN",
+      "author": "danvangeest",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Closes #3",
+      "createdAt": "2025-11-03T15:23:05Z",
+      "updatedAt": "2025-11-03T15:23:05Z",
+      "baseRepository": "seanturner/cms-fn-dsa",
+      "baseRefName": "main",
+      "baseRefOid": "7298bc5079eb2c076b30bd5621c5da8c9585f6d3",
+      "headRepository": "seanturner/cms-fn-dsa",
+      "headRefName": "dvg/no_deterministic",
+      "headRefOid": "e9d4ebf49ef39adf620353cb8f61e78b5efa5b08",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
