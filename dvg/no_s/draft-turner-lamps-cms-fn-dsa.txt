@@ -5,8 +5,8 @@
 Limited Additional Mechanisms for PKIX and SMIME            D. Van Geest
 Internet-Draft                                       CryptoNext Security
 Intended status: Standards Track                               S. Turner
-Expires: 8 May 2026                                                sn3rd
-                                                         4 November 2025
+Expires: 13 July 2026                                              sn3rd
+                                                          9 January 2026
 
 
    Use of the FN-DSA Signature Algorithm in the Cryptographic Message
@@ -56,11 +56,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 8 May 2026.
+   This Internet-Draft will expire on 13 July 2026.
 
 Copyright Notice
 
-   Copyright (c) 2025 IETF Trust and the persons identified as the
+   Copyright (c) 2026 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -78,7 +78,7 @@ Table of Contents
      1.1.  Conventions and Definitions
    2.  FN-DSA Algorithm Identifiers
    3.  Signed-Data Conventions
-     3.1.  Pure Mode vs Pre-Hash Mode
+     3.1.  Pure Mode vs Pre-hash Mode
      3.2.  Signature Generation and Verification
      3.3.  SignerInfo Content
    4.  Security Considerations
@@ -97,9 +97,11 @@ Table of Contents
    The Fast-Fourier Transform over NTRU-Lattice-Based Digital Signature
    Algorithm (FN-DSA) is a digital signature algorithm standardised by
    the US National Institute of Standards and Technology (NIST) as part
-   of their post-quantum cryptography standardisation process.  It
-   offers smaller signatures and significantly faster runtimes than SLH-
-   DSA [FIPS205], an alternative post-quantum signature algorithm also
+   of their post-quantum cryptography standardisation process.  It is
+   intended to be secure against both "traditional" cryptographic
+   attacks, as well as attacks utilising a quantum computer.  It offers
+   smaller signatures and significantly faster runtimes than SLH-DSA
+   [FIPS205], an alternative post-quantum signature algorithm also
    standardised by NIST.  This document specifies the use of the FN-DSA
    in the CMS at two security levels: FN-DSA-512 and FN-DSA-1024.  See
    Appendix B of I-D.turner-lamps-fn-dsa-certificates for more
@@ -162,7 +164,7 @@ Table of Contents
       |  TODO: NIST WILL ASSIGN THESE.
 
    sigAlgs OBJECT IDENTIFIER ::= { joint-iso-itu-t(2) country(16)
-       us(840) organization(1) gov(101) csor(3) nistAlgorithms(4) 3 }
+       us(840) organization(1) gov(101) csor(3) nistAlgorithm(4) 3 }
 
    id-fn-dsa-512 OBJECT IDENTIFIER ::= { sigAlgs TBD }
 
@@ -170,19 +172,19 @@ Table of Contents
 
 3.  Signed-Data Conventions
 
-3.1.  Pure Mode vs Pre-Hash Mode
+3.1.  Pure Mode vs Pre-hash Mode
 
    [RFC5652] specifies that digital signatures for CMS are produced
    using a digest of the message to be signed and the signer's private
-   key.  At the [RFC5652] was published, all signature algorithms
-   supported in the CMS required a message digest to be calculated
-   externally to that algorithm, which would then be supplied to the
-   algorithm implementation when calculating and verifying signatures.
-   Since then, EdDSA [RFC8032], ML-DSA [FIPS20], and SLH-DSA [FIPS205],
-   have also been standardised, and these algorithms support both a
-   "pure" and "pre-hash" mode.  In the pre-hash mode, a message digest
-   (the "pre-hash") is calculated separately and supplied to the
-   signature algorithm as described above.  In the pure mode, the
+   key.  At the time of publication of that RFC, all signature
+   algorithms supported in the CMS required a message digest to be
+   calculated externally to that algorithm, which would then be supplied
+   to the algorithm implementation when calculating and verifying
+   signatures.  Since then, EdDSA [RFC8032], ML-DSA [FIPS20], and SLH-
+   DSA [FIPS205], have also been standardised, and these algorithms
+   support both a "pure" and "pre-hash" mode.  In the pre-hash mode, a
+   message digest (the "pre-hash") is calculated separately and supplied
+   to the signature algorithm as described above.  In the pure mode, the
    message to be signed or verified is instead supplied directly to the
    signature algorithm.  When EdDSA [RFC8419], SLH-DSA [RFC9814], and
    ML-DSA [RFC9882] are used with CMS, only the pure mode of those
@@ -220,12 +222,12 @@ Table of Contents
    in Section 5.4 of [RFC5652], this encoding includes the tag and
    length octets, but an EXPLICIT SET OF tag is used rather than the
    IMPLICIT \[0\] tag that appears in the final message.  At a minimum,
-   the signedAttrs field MUST include a content-type attribute and a
-   message-digest attribute.  The message-digest attribute contains a
-   hash of the content of the signed-data, where the content is as
-   described for the absent signed attributes case above.  Recalculation
-   of the hash value by the recipient is an important step in signature
-   verification.
+   the signedAttrs field MUST at minimum include a content-type
+   attribute and a message-digest attribute.  The message-digest
+   attribute contains a hash of the content of the signed-data, where
+   the content is as described for the absent signed attributes case
+   above.  Recalculation of the hash value by the recipient is an
+   important step in signature verification.
 
    Section 4 of [RFC9814] describes how, when the content of a signed-
    data is large, performance may be improved by including signed
@@ -302,7 +304,7 @@ Table of Contents
             | FN-DSA-10124        | id-fn-dsa-1024           |
             +---------------------+--------------------------+
 
-               Table 2: Signature Algorithm Identifier OIDs
+               Table 2: Signature algorithm identifier OIDs
                                 for FN-DSA
 
       |  TODO: Verify paragraph references.
@@ -326,7 +328,7 @@ Table of Contents
 
       |  TODO: Verify paragraph reference.
 
-   FN-DSA depends on high-quality random numbers that are suitable for
+   FN-DSA depends on high quality random numbers that are suitable for
    use in cryptography.  The use of inadequate pseudo-random number
    generators (PRNGs) to generate such values can significantly
    undermine the security properties offered by a cryptographic
@@ -386,8 +388,8 @@ Table of Contents
 
 7.1.  Normative References
 
-   [CSOR]     NIST, "Computer Security Objects Register (CSOR)", 13 June
-              2025, <https://csrc.nist.gov/projects/computer-security-
+   [CSOR]     NIST, "Computer Security Objects Register", 20 August
+              2024, <https://csrc.nist.gov/projects/computer-security-
               objects-register/algorithm-registration>.
 
    [FIPS206]  "Fast Fourier Transform over NTRU-Lattice-Based Digital
@@ -432,8 +434,7 @@ Table of Contents
 7.2.  Informative References
 
    [BD23]     Bauer, S. and F. D. Santis, "A Differential Fault Attack
-              against Deterministic Falcon Signatures", Cryptology
-              ePrint Archive, Paper 2023/422 , 2023,
+              against Deterministic Falcon Signatures", 2023,
               <https://eprint.iacr.org/2023/422>.
 
    [FIPS180]  "Secure hash standard", National Institute of Standards
