@@ -169,7 +169,7 @@ Register {{CSOR}}, and are reproduced here for convenience.
 
 ~~~ asn.1
 sigAlgs OBJECT IDENTIFIER ::= { joint-iso-itu-t(2) country(16)
-    us(840) organization(1) gov(101) csor(3) nistAlgorithms(4) 3 }
+    us(840) organization(1) gov(101) csor(3) nistAlgorithm(4) 3 }
 
 id-fn-dsa-512 OBJECT IDENTIFIER ::= { sigAlgs TBD }
 
