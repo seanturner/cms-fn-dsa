@@ -3,7 +3,7 @@ title: "Use of the FN-DSA Signature Algorithm in the Cryptographic Message Synta
 abbrev: "FN-DSA in the CMS"
 category: std
 
-docname: draft-turner-lamps-cms-fn-dsa-latest
+docname: draft-ietf-lamps-cms-fn-dsa-latest
 submissiontype: IETF
 number:
 date:
@@ -22,8 +22,8 @@ venue:
   type: "Working Group"
   mail: "spasm@ietf.org"
   arch: "https://mailarchive.ietf.org/arch/browse/spasm/"
-  github: "seanturner/cms-fn-dsa"
-  latest: "https://seanturner.github.io/cms-fn-dsa/draft-turner-lamps-cms-fn-dsa.html"
+  github: "lamps-wg/cms-fn-dsa"
+  latest: "https://lamps.github.io/cms-fn-dsa/draft-turner-lamps-cms-fn-dsa.html"
 
 author:
   -
@@ -81,7 +81,8 @@ informative:
       - name: Fabrizio De Santis
     date: 2023
     target: https://eprint.iacr.org/2023/422
----
+
+...
 
 --- abstract
 
