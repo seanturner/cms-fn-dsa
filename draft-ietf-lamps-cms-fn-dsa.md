@@ -23,7 +23,7 @@ venue:
   mail: "spasm@ietf.org"
   arch: "https://mailarchive.ietf.org/arch/browse/spasm/"
   github: "lamps-wg/cms-fn-dsa"
-  latest: "https://lamps.github.io/cms-fn-dsa/draft-turner-lamps-cms-fn-dsa.html"
+  latest: "https://lamps.github.io/cms-fn-dsa/draft-ietf-lamps-cms-fn-dsa.html"
 
 author:
   -
