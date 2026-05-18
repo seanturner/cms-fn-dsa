@@ -108,7 +108,7 @@ as attacks utilising a quantum computer. It offers smaller signatures
 and significantly faster runtimes than SLH-DSA {{FIPS205}}, an
 alternative post-quantum signature algorithm also standardised by NIST.
 This document specifies the use of the FN-DSA in the CMS at two security
-levels: FN-DSA-512 and FN-DSA-1024.  See Appendix B of I-D.turner-lamps-fn-dsa-certificates
+levels: FN-DSA-512 and FN-DSA-1024.  See Appendix B of {{!I-D.ietf-lamps-fn-dsa-certificates}}
 for more information on the security levels and key sizes of FN-DSA.
 
 Prior to standardisation, FN-DSA was known as Falcon.  FN-DSA and Falcon
@@ -128,7 +128,7 @@ identify cryptographic algorithms. In the CMS, the `AlgorithmIdentifier`
 field is used to identify FN-DSA signatures in the `signed-data` content
 type. They may also appear in X.509 certificates used to verify those
 signatures. The same `AlgorithmIdentifier` values are used to identify
-FN-DSA public keys and signature algorithms. I-D.turner-lamps-fn-dsa-certificates
+FN-DSA public keys and signature algorithms. {{I-D.ietf-lamps-fn-dsa-certificates}}
 describes the use of FN-DSA in X.509 certificates.
 The `AlgorithmIdentifier` type is defined as follows:
 
@@ -342,7 +342,7 @@ ignore the content of the `digestAlgorithm` field.
 
 # Security Considerations
 
-The security considerations in {{RFC5652}} and I-D.turner-lamps-fn-dsa-certificates
+The security considerations in {{RFC5652}} and {{I-D.ietf-lamps-fn-dsa-certificates}}
 apply to this specification.
 
 Security of the FN-DSA private key is critical. Compromise of the private
@@ -423,7 +423,7 @@ Module Identifier" registry (1.2.840.113549.1.9.16.0):
 # ASN.1 Module {#asn1}
 
 <aside markdown="block">
-RFC EDITOR: Please replace the reference to I-D.turner-lamps-fn-dsa-certificates
+RFC EDITOR: Please replace the reference to {{I-D.ietf-lamps-fn-dsa-certificates}}
 in the ASN.1 module below with a reference the corresponding published RFC.
 </aside>
 
@@ -437,7 +437,7 @@ in the ASN.1 module below with a reference the corresponding published RFC.
 
 This appendix contains example `signed-data` encodings. They can be
 verified using the example public keys and certificates specified in
-Appendix C of I-D.turner-lamps-fn-dsa-certificates.
+Appendix C of {{I-D.ietf-lamps-fn-dsa-certificates}}.
 
 The following is an example of a `signed-data` with a single
 FN-DSA-512 signer, with signed attributes included:
