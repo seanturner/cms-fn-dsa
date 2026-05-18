@@ -104,7 +104,7 @@ Table of Contents
    [FIPS205], an alternative post-quantum signature algorithm also
    standardised by NIST.  This document specifies the use of the FN-DSA
    in the CMS at two security levels: FN-DSA-512 and FN-DSA-1024.  See
-   Appendix B of I-D.turner-lamps-fn-dsa-certificates for more
+   Appendix B of [I-D.ietf-lamps-fn-dsa-certificates] for more
    information on the security levels and key sizes of FN-DSA.
 
    Prior to standardisation, FN-DSA was known as Falcon.  FN-DSA and
@@ -129,7 +129,7 @@ Table of Contents
    the signed-data content type.  They may also appear in X.509
    certificates used to verify those signatures.  The same
    AlgorithmIdentifier values are used to identify FN-DSA public keys
-   and signature algorithms.  I-D.turner-lamps-fn-dsa-certificates
+   and signature algorithms.  [I-D.ietf-lamps-fn-dsa-certificates]
    describes the use of FN-DSA in X.509 certificates.  The
    AlgorithmIdentifier type is defined as follows:
 
@@ -320,8 +320,8 @@ Table of Contents
 
 4.  Security Considerations
 
-   The security considerations in [RFC5652] and I-D.turner-lamps-fn-dsa-
-   certificates apply to this specification.
+   The security considerations in [RFC5652] and
+   [I-D.ietf-lamps-fn-dsa-certificates] apply to this specification.
 
    Security of the FN-DSA private key is critical.  Compromise of the
    private key will enable an adversary to forge arbitrary signatures.
@@ -396,6 +396,9 @@ Table of Contents
               Signature Algorithm", n.d., <https://www.nist.gov/news-
               events/news/2024/08/nist-releases-first-3-finalized-post-
               quantum-encryption-standards>.
+
+   [I-D.ietf-lamps-fn-dsa-certificates]
+              "*** BROKEN REFERENCE ***".
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -507,9 +510,9 @@ Table of Contents
 
 Appendix A.  ASN.1 Module
 
-      |  RFC EDITOR: Please replace the reference to I-D.turner-lamps-
-      |  fn-dsa-certificates in the ASN.1 module below with a reference
-      |  the corresponding published RFC.
+      |  RFC EDITOR: Please replace the reference to
+      |  [I-D.ietf-lamps-fn-dsa-certificates] in the ASN.1 module below
+      |  with a reference the corresponding published RFC.
 
    <CODE BEGINS>
    FN-DSA-Module-2026
@@ -553,7 +556,7 @@ Appendix B.  Examples
 
    This appendix contains example signed-data encodings.  They can be
    verified using the example public keys and certificates specified in
-   Appendix C of I-D.turner-lamps-fn-dsa-certificates.
+   Appendix C of [I-D.ietf-lamps-fn-dsa-certificates].
 
    The following is an example of a signed-data with a single FN-DSA-512
    signer, with signed attributes included:
