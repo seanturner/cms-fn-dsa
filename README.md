@@ -2,18 +2,17 @@
 
 # Use of the FN-DSA Signature Algorithm in the Cryptographic Message Syntax (CMS)
 
-This is the working area for the individual Internet-Draft, "Use of the FN-DSA Signature Algorithm in the Cryptographic Message Syntax (CMS)".
+This is the working area for the LAMPS WG's Internet-Draft, "Use of the FN-DSA Signature Algorithm in the Cryptographic Message Syntax (CMS)".
 
-* [Editor's Copy](https://seanturner.github.io/cms-fn-dsa/#go.draft-turner-lamps-cms-fn-dsa.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-turner-lamps-cms-fn-dsa)
-* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-turner-lamps-cms-fn-dsa)
-* [Compare Editor's Copy to Individual Draft](https://seanturner.github.io/cms-fn-dsa/#go.draft-turner-lamps-cms-fn-dsa.diff)
+* [Editor's Copy](https://lamps-wg.github.io/cms-fn-dsa/#go.draft-ietf-lamps-cms-fn-dsa.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-lamps-cms-fn-dsa)
+* [Compare Editor's Copy to Individual Draft](https://lamps-wg.github.io/cms-fn-dsa/#go.draft-ietf-lamps-cms-fn-dsa.diff)
 
 
 ## Contributing
 
 See the
-[guidelines for contributions](https://github.com/seanturner/cms-fn-dsa/blob/main/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/lamps-wg/cms-fn-dsa/blob/main/CONTRIBUTING.md).
 
 The contributing file also has tips on how to make contributions, if you
 don't already know how to do that.
